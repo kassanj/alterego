@@ -5,3 +5,4 @@ We will be initially selling four different categories; tops, bottoms, shoes, an
 - Search
 - WooCommerce
 - Stripe
+- Responsive
