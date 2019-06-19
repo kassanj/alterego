@@ -4,3 +4,30 @@ body {
   line-height: 1.4;
   color: #000;
 }
+
+.site-header {
+  background-color: #FB7915;
+}
+
+.main-navigation {
+  margin: 32px 0 48px 64px;
+}
+
+.main-menu a {
+  display: block;
+  font-size: 32px;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.site-branding img {
+  width: auto !important;
+  height: auto !important;
+  display: block;
+  max-height: 100vh;
+}
+
+.logo {
+  width: 330px;
+}
