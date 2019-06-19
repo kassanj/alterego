@@ -257,3 +257,14 @@ function category_header_background() {
 	$bg_color = get_field('background_color', 'product_cat_' . $category_id);
 	echo 'background-color: ' . $bg_color;
 }
+
+// Remove woocommerce sidebar from ALL templates
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+
+// Removes Add to Cart buttons from our loop products
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+
+// Returns full sized image for our product archive images (vs. low res version)
+add_filter('single_product_archive_thumbnail_size', function( $size ) {
+	return 'full';
+} );
