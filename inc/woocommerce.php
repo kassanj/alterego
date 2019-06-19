@@ -244,3 +244,16 @@ if ( ! function_exists( 'alterego_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+// This is going to find us the current category id
+function get_category_id() {
+	$category = get_queried_object();
+	return $category->term_id;
+}
+
+function category_header_background() {
+	// get the category
+	$category_id = get_category_id();
+	$bg_color = get_field('background_color', 'product_cat_' . $category_id);
+	echo 'background-color: ' . $bg_color;
+}

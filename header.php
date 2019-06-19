@@ -24,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'alterego' ); ?></a>
 
-	<header id="masthead" class="site-header flex">
+	<header id="masthead" class="site-header flex" style="<?php category_header_background(); ?>">
 
 		<nav id="site-navigation" class="main-navigation flex flex-auto items-end relative">
 

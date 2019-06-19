@@ -31,3 +31,22 @@ body {
 .logo {
   width: 330px;
 }
+
+.products {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+
+.product a {
+  display: block;
+  padding: 32px;
+}
+
+.product img {
+  width: auto !important;
+  height: auto !important;
+  display: block;
+  margin: auto;
+}
