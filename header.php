@@ -43,7 +43,7 @@
 		</nav><!-- #site-navigation -->
 
 		<div class="site-branding">
-			<?php echo wp_get_attachment_image(88, 'full'); ?>
+			<img src="<?php get_category_image('home'); ?>" class="db featured-image">
 		</div><!-- .site-branding -->
 
 	</header><!-- #masthead -->

@@ -273,3 +273,17 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 )
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10 );
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+// Set featured image by home and category page
+function get_category_image($term) {
+
+	$category_id = get_category_id();
+
+	if (empty($category_id)) {
+		$category = get_term_by( 'slug', $term, 'product_cat' );
+		$category_id = $category->term_id;
+	}
+
+	$thumbnail_id = get_woocommerce_term_meta( $category_id, 'thumbnail_id', true );
+	echo wp_get_attachment_url($thumbnail_id);
+}
