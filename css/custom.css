@@ -103,3 +103,23 @@ span.marquee {
   font-size: 32px;
   padding: 32px;
 }
+
+/*
+  1. When we hover over navigation, fade out all links
+  2. For particular link we are hovering on, keep it faded in
+  3. When we are in a particular category, keep link item fade in too
+*/
+
+.main-menu .menu-item a {
+  transition: opacity .2s ease;
+}
+
+.archive .main-menu .menu-item a,
+.main-menu:hover .menu-item a {
+  opacity: 0.25;
+}
+
+.main-menu .menu-item.current-menu-item a,
+.main-menu .menu-item:hover a {
+  opacity: 1;
+}
