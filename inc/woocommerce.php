@@ -291,3 +291,9 @@ function get_category_image($term) {
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+
+function single_header_background() {
+	$post_id->ID;
+	$bg_color = get_field('background_color', $post_id);
+	echo 'background-color: ' . $bg_color;
+}

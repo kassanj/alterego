@@ -123,3 +123,17 @@ span.marquee {
 .main-menu .menu-item:hover a {
   opacity: 1;
 }
+
+.single-product .product {
+  display: flex;
+  padding: 32px;
+}
+
+.woocommerce-product-gallery {
+  flex: auto;
+}
+
+.single-product .summary {
+  max-width: 390px;
+  padding-left: 64px;
+}

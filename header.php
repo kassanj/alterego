@@ -24,28 +24,17 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'alterego' ); ?></a>
 
-	<header id="masthead" class="site-header flex" style="<?php category_header_background(); ?>">
+	<?php if(is_home() || is_product_category()) : ?>
 
-		<nav id="site-navigation" class="main-navigation flex flex-auto items-end relative">
+		<header id="masthead" class="site-header flex" style="<?php category_header_background(); ?>">
+				<?php get_template_part('template-parts/category-navigation'); ?>
+				<?php get_template_part('template-parts/featured-image'); ?>
+		</header>
 
-			<a href="<?php echo get_site_url(); ?>" class="logo absolute top-0 left-0">
-				<img src="<?php echo get_template_directory_uri() . '/images/alter-ego-logo.svg'; ?>" class="db">
-			</a>
+	<?php elseif(!is_product()) : ?>
 
-			<?php
-			wp_nav_menu( array(
-				 'theme_location' => 'menu-1',
-				 'menu_id' => 'primary-menu',
-				 'menu_class' => 'main-menu ma0 pa0 list'
-			) );
-			?>
+		<?php get_template_part('template-parts/page-header'); ?>
 
-		</nav><!-- #site-navigation -->
-
-		<div class="site-branding">
-			<img src="<?php get_category_image('home'); ?>" class="db featured-image">
-		</div><!-- .site-branding -->
-
-	</header><!-- #masthead -->
+	<?php endif; ?>
 
 	<div id="content" class="site-content">
