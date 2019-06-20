@@ -77,3 +77,29 @@ body {
 .product-info .price {
   font-size: 20px;
 }
+
+.woocommerce-products-header__title {
+  display: flex;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateX(-50%);
+  width: 200%;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
+
+span.marquee {
+  animation: marquee 2s linear infinite;
+  display: block;
+  line-height: 1;
+  font-size: 32px;
+  padding: 32px;
+}
