@@ -32,6 +32,8 @@ get_header();
 				$args = array(
 					'post_type' => 'product',
 					'post_per_page' => 3,
+					'orderby' => 'menu_order',
+					'order' => 'DESC',
 					'tax_query' => array(
 						array(
 							'taxonomy' => 'product_visibility',
