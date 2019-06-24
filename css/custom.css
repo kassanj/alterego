@@ -145,6 +145,22 @@ span.marquee {
   margin-bottom: 64px;
 }
 
+.site-footer li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.site-footer a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.price ins {
+  text-decoration: none;
+}
+
 
 @media(min-width: 60em) {
   .main-menu a {

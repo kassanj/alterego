@@ -300,3 +300,8 @@ function single_header_background() {
 	$bg_color = get_field('background_color', $post_id);
 	echo 'background-color: ' . $bg_color;
 }
+
+// removes in the product loop
+remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
+// removes on the product page itself
+remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
