@@ -56,6 +56,11 @@ get_header();
 
 			?>
 			</ul>
+
+			<div class="home-video">
+				<video src="<?php echo get_template_directory_uri() . '/images/alter-ego-video-HD.mp4'; ?>" autoplay loop muted class="db w-100 h-auto"></video>
+			</div>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
