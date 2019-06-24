@@ -9,13 +9,9 @@ body {
   background-color: #FB7915;
 }
 
-.main-navigation {
-  margin: 32px 0 48px 64px;
-}
-
 .main-menu a {
   display: block;
-  font-size: 32px;
+  font-size: 20px;
   text-decoration: none;
   color: #fff;
   line-height: 1.5;
@@ -29,13 +25,14 @@ body {
 }
 
 .logo {
-  width: 330px;
+  max-width: 330px;
 }
 
 .products {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -100,8 +97,8 @@ span.marquee {
   animation: marquee 2s linear infinite;
   display: block;
   line-height: 1;
-  font-size: 32px;
-  padding: 32px;
+  font-size: 20px;
+  padding: 20px;
 }
 
 /*
@@ -136,4 +133,25 @@ span.marquee {
 .single-product .summary {
   max-width: 390px;
   padding-left: 64px;
+}
+
+.page-content {
+  max-width: 1220px;
+}
+
+.header-page {
+  background-color: #FBBB28;
+  padding: 32px 64px;
+  margin-bottom: 64px;
+}
+
+
+@media(min-width: 60em) {
+  .main-menu a {
+    font-size: 32px;
+  }
+  span.marquee {
+    font-size: 32px;
+    padding: 32px;
+  }
 }

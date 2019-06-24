@@ -270,9 +270,12 @@ add_filter('single_product_archive_thumbnail_size', function( $size ) {
 } );
 
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
-remove_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10 );
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+// Remove notices from default positions
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10 );
+remove_action( 'woocommerce_before_single_product', 'wc_print_notices', 10 );
 
 // Set featured image by home and category page
 function get_category_image($term) {

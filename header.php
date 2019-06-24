@@ -22,11 +22,18 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+
+	<?php if ( wc_notice_count() ) : ?>
+		<div class="pa3 tc">
+			<?php wc_print_notices(); ?>
+		</div>
+	<?php endif; ?>
+
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'alterego' ); ?></a>
 
 	<?php if(is_home() || is_product_category()) : ?>
 
-		<header id="masthead" class="site-header flex" style="<?php category_header_background(); ?>">
+		<header id="masthead" class="site-header flex-ns" style="<?php category_header_background(); ?>">
 				<?php get_template_part('template-parts/category-navigation'); ?>
 				<?php get_template_part('template-parts/featured-image'); ?>
 		</header>
