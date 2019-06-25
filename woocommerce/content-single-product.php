@@ -31,6 +31,13 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
+
+<style>
+  .summary .button {
+    color: <?php the_field('background_color'); ?> !important;
+  }
+</style>
+
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
 	<?php get_template_part('template-parts/header-search'); ?>
