@@ -258,6 +258,11 @@ function category_header_background() {
 	echo 'background-color: ' . $bg_color;
 }
 
+function cart_background_color($post_id) {
+  $bg_color = get_field('background_color', $post_id);
+  echo 'background-color:' . $bg_color;
+}
+
 // Remove woocommerce sidebar from ALL templates
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
@@ -305,3 +310,19 @@ function single_header_background() {
 remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
 // removes on the product page itself
 remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
+
+
+function cart_url() {
+  global $woocommerce;
+  echo $woocommerce->cart->get_cart_url();
+}
+
+// here we replace our x symbol with a trash icon
+add_filter('woocommerce_cart_item_remove_link', 'remove_icon_and_add_text', 10, 2);
+
+function remove_icon_and_add_text($string, $cart_item_key) {
+  $string = str_replace('class="remove"', '', $string);
+  $icon_url = get_template_directory_uri() . '/images/trash.svg';
+  $trash_icon = "<img src={$icon_url}>";
+  return str_replace('&times;', $trash_icon, $string);
+}
