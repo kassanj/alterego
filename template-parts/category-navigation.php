@@ -1,4 +1,4 @@
-<nav id="site-navigation" class="main-navigation flex-l flex-auto flex-column justify-between relative pa3 ma4-l">
+<nav id="site-navigation" class="main-navigation flex-l flex-column justify-between relative pa3 ma4-l">
 
   <a href="<?php echo get_site_url(); ?>" class="db mb3 left-0">
     <img src="<?php echo get_template_directory_uri() . '/images/alter-ego-logo.svg'; ?>" class="db">
