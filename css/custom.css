@@ -147,23 +147,17 @@ span.marquee {
   opacity: 1;
 }
 
-.single-product .product {
-  display: flex;
-  padding: 32px;
-}
-
 .woocommerce-product-gallery {
   flex: auto;
 }
 
 .single-product .summary {
   max-width: 390px;
-  padding-left: 64px;
 }
 
-/* .page-content {
+.page-content {
   max-width: 1220px;
-} */
+}
 
 .header-page {
   background-color: #FBBB28;
@@ -187,9 +181,17 @@ span.marquee {
   text-decoration: none;
 }
 
-.search-meta {
-  top: 3rem;
-  right: 3rem;
+.site-branding .search-meta {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* for our product pages we want to position our
+baskets/search icons slightly differently */
+.summary .search-meta {
+  margin-bottom: 1rem;
+  justify-content: flex-end;
 }
 
 /* cart styles */
@@ -309,6 +311,10 @@ th {
   background-color: #fff;
 }
 
+.product .woocommerce-product-gallery__wrapper {
+  margin: 0;
+}
+
 /* media queries */
 @media(max-width: 40em) {
   .product-thumbnail {
@@ -354,5 +360,17 @@ th {
   }
   .summary .product_title {
     font-size: 3rem;
+  }
+  .site-branding .search-meta {
+    right: 3rem;
+    top: 3rem;
+  }
+}
+
+@media(max-width: 30em) {
+  .summary .search-meta {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
 }
