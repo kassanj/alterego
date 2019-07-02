@@ -349,7 +349,30 @@ th {
   display: block
 }
 
+/* flash message styles */
+.woocommerce-message, .woocommerce-error, .woocommerce-notice {
+  line-height: 2rem;
+  font-size: 1rem;
+  color: #fff;
+}
 
+.woocommerce-message {
+  background-color: #c0d045;
+}
+
+.woocommerce-info {
+  background-color: #fbbb28;
+}
+
+.woocommerce-error {
+  background-color: #ff4141;
+}
+
+.flash-message .button {
+  background-color: transparent;
+  padding: 0;
+  margin-left: 1rem;
+}
 
 /* media queries */
 @media(max-width: 40em) {
