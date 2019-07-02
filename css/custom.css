@@ -303,7 +303,7 @@ th {
 }
 
 .summary .quantity {
-  display: none;
+  display: none !important;
 }
 
 .summary .button {
@@ -314,6 +314,35 @@ th {
 .product .woocommerce-product-gallery__wrapper {
   margin: 0;
 }
+
+/* product variation styles */
+.variations_form,
+.variations tbody {
+  display: flex;
+}
+
+/* remove labels */
+.variations .label,
+.reset_variations,
+.woocommerce-variation-availability {
+  display: none;
+}
+
+/* override default styles */
+.variations .value {
+  display: block;
+  padding: 0;
+  padding-right: .25rem;
+}
+
+.variations select {
+  height: 32px;
+  border: none;
+  padding: 0;
+  display: block
+}
+
+
 
 /* media queries */
 @media(max-width: 40em) {

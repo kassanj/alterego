@@ -326,3 +326,10 @@ function remove_icon_and_add_text($string, $cart_item_key) {
   $trash_icon = "<img src={$icon_url}>";
   return str_replace('&times;', $trash_icon, $string);
 }
+
+add_filter( 'woocommerce_dropdown_variation_attribute_options_args', 'dropdown_variation_attribute_options', 10, 1 );
+
+function dropdown_variation_attribute_options( $args ){
+  $args['show_option_none'] = __( '' );
+  return $args;
+}
